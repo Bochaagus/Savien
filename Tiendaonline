@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Savien - Tienda en línea</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    header {
+
+      background-color: #333;
+
+      color: #fff;
+
+      padding: 20px;
+
+      text-align: center;
+
+    }
+
+    h1 {
+
+      margin: 0;
+
+    }
+
+    main {
+
+      margin: 20px;
+
+    }
+
+    .image-upload {
+
+      border: 2px dashed #ccc;
+
+      border-radius: 8px;
+
+      padding: 20px;
+
+      text-align: center;
+
+    }
+
+    .image-upload input[type="file"] {
+
+      display: none;
+
+    }
+
+    .image-upload label {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      cursor: pointer;
+
+    }
+
+    .image-preview {
+
+      margin-top: 20px;
+
+    }
+
+    .image-preview img {
+
+      max-width: 300px;
+
+      max-height: 300px;
+
+      margin-top: 10px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Savien</h1>
+
+  </header>
+
+  
+
+  <main>
+
+    <div class="image-upload">
+
+      <label for="file-upload">Subir imagen:</label>
+
+      <input type="file" id="file-upload">
+
+      <div class="image-preview">
+
+        <img id="image-preview" src="#" alt="Vista previa de la imagen" />
+
+      </div>
+
+    </div>
+
+    <div class="store">
+
+      <!-- Aquí puedes agregar los elementos de tu tienda en línea -->
+
+      <!-- Puedes utilizar HTML, CSS y JavaScript adicional según tus necesidades -->
+
+    </div>
+
+  </main>
+
+  <script>
+
+    // Obtener el input de carga de archivo y la vista previa de imagen
+
+    const fileUpload = document.getElementById("file-upload");
+
+    const imagePreview = document.getElementById("image-preview");
+
+    // Escuchar cambios en el input de carga de archivo
+
+    fileUpload.addEventListener("change", function (event) {
+
+      const file = event.target.files[0];
+
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+
+        imagePreview.src = event.target.result;
+
+      };
+
+      reader.readAsDataURL(file);
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
